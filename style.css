@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+  --primary-orange-clr: hsl(31, 77%, 52%);
+  --primary-dark-cyan-clr: hsl(184, 100%, 22%);
+  --primary-very_dark-cyan-clr: hsl(179, 100%, 13%);
+
+  --secondary-white_clr: hsla(0, 0%, 100%, 0.75);
+  --secondary-lightgray-clr: hsl(0, 0%, 95%);
+
+  --ff-lexend-deca: 'Lexend Deca', sans-serif;
+  --ff-big-shoulders: 'Big Shoulders Display';
+  
+  --ff-font-size: 15px;
+}
+
+*{
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: var(--ff-font-size);
+  background-color: var(--secondary-lightgray-clr);
+}
+
+main{
+  width: 90%;
+  padding: 3rem 0;
+  margin-inline: auto;
+}
+
+h2{
+  font-family: var(--ff-big-shoulders);
+  text-transform: uppercase;
+}
+
+p{
+  font-family: var(--ff-lexend-deca);
+  font-size: var(--ff-font-size);
+}
+
+.btn{
+  padding: .8rem;
+  font-family: var(--ff-lexend-deca);
+  border-radius: 50px;
+  background-color: var(--secondary-white_clr);
+}
+
+.sedan .btn{
+  color: var(--primary-orange-clr);
+}
+
+.suvs .btn{
+  color: var(--primary-dark-cyan-clr);
+}
+
+.luxury .btn{
+  color: var(--primary-very_dark-cyan-clr);
+}
+
+.btn:hover{
+  cursor: pointer;
+  background: transparent;
+  color: var(--secondary-white_clr);
+  border: 1px solid var(--secondary-white_clr);
+}
+
+.container{
+  width: min(80%, 70rem);
+  margin-block: 5rem;
+  margin-inline:auto;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.card{
+  padding: 3rem;
+  color: var(--secondary-white_clr);
+  line-height: 1.5;
+}
+
+.sedan{
+  background-color: var(--primary-orange-clr);
+  border-top-left-radius: 10px ;
+  border-top-right-radius: 10px;
+}
+
+.suvs{
+  background-color: var(--primary-dark-cyan-clr);
+}
+
+.luxury{
+  background-color: var(--primary-very_dark-cyan-clr);
+  border-bottom-left-radius: 10px ;
+  border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 60em){
+  main{
+    transform: translate(0, 20%);
+    box-shadow: -5px 5px 40px 10px gray;
+  }
+
+  .container{
+    grid-auto-flow: column;
+  }
+
+  .luxury{
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px ;
+  }
+
+  .sedan{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .btn{
+    margin-top: 3rem;
+  }
+}
